@@ -1,0 +1,9 @@
+{
+    "team 1":{
+    "Characters":"Character 1, Character 2, Character 3, Character 4, Character 5",
+    "Spells":"Spell 1, Spell 2",
+    "Strategy":"This is a Strtegy text",
+    "Counter_Team":"Character 1, Character 2, Character 3, Character 4, Character 5",
+    "Counter_Team_Strategy":"This is couter team strategy"
+    }
+  }

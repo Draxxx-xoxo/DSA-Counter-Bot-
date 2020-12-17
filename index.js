@@ -28,6 +28,10 @@ client.on('message', message => {
 
 	if (command === 'help') {
         client.commands.get('help').execute(message, args);
+	}
+
+	if (command === 'approval') {
+        client.commands.get('approval_queue_help').execute(message, args);
     }
 });
 

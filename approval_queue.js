@@ -68,6 +68,14 @@ client.on('message', async message => {
             msg = msg.replace('cts[' + counter_team_strategy + ']', '');
         }
 
+
+
+        message.channel.send('Submittion Sent')
+        .then(msg => {
+            msg.delete({ timeout: 3000 })
+          })
+
+
             const embed = new Discord.MessageEmbed()
                 .setColor('#ddbfac')
                 .setTitle(team_name)
@@ -78,8 +86,8 @@ client.on('message', async message => {
 
                 )
 
-            message.channel.send(embed);        
-                
+            //message.channel.send(embed);        
+            client.channels.cache.get(`785162150268108820`).send(embed);  
     }
 });
 

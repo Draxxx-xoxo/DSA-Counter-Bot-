@@ -1,1 +1,1 @@
-Worker: npm i; node --max-old-space-size=512 main.js
+Worker: node index.js

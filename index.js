@@ -30,7 +30,7 @@ client.on('message', message => {
         client.commands.get('help').execute(message, args);
 	}
 
-	if (command === 'approval') {
+	else if (command === 'approval') {
         client.commands.get('approval_queue_help').execute(message, args);
     }
 });

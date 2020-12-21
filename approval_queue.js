@@ -13,7 +13,6 @@ client.on('message', async message => {
     if (message.content.toLowerCase().startsWith(`c!submit`))
     {
         var msg = '';
-        var strategy = '';
         var team_name = '';
         var team_member = '';
         var counter_team = '';

@@ -44,14 +44,6 @@ client.on('message', async message => {
             msg = msg.replace('tm[' + team_member + ']', '');
         }
 
-        if (msg.indexOf('s[') >= 0){
-            var start = msg.indexOf('s[');
-            var end = msg.indexOf(']');
-            strategy = msg.substring(start + 2, end);
-
-            msg = msg.replace('s[' + strategy + ']', '');
-        }
-
         if (msg.indexOf('ct[') >= 0){
             var start = msg.indexOf('ct[');
             var end = msg.indexOf(']');
@@ -68,17 +60,23 @@ client.on('message', async message => {
             msg = msg.replace('cts[' + counter_team_strategy + ']', '');
         }
 
+
+            message.channel.send('Submittion Sent')
+            .then(msg => {
+                msg.delete({ timeout: 3000 })
+              })
+
+
             const embed = new Discord.MessageEmbed()
                 .setColor('#ddbfac')
                 .setTitle(team_name)
                 .setDescription('__**Team**__ ```' + team_member + '```' )
                 .addFields(
-                    { name: '__**Strategy**__', value: '```' + strategy + '```'},
                     { name: '__**Team 1**__', value: '```' + counter_team + '```\n' + counter_team_strategy},
 
                 )
-
-            message.channel.send(embed);        
+            
+            client.channels.cache.get(`785162150268108820`).send(embed);
                 
     }
 });

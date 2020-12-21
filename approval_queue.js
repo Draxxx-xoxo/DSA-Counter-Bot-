@@ -13,6 +13,7 @@ client.on('message', async message => {
     if (message.content.toLowerCase().startsWith(`c!submit`))
     {
         var msg = '';
+        var strategy = '';
         var team_name = '';
         var team_member = '';
         var counter_team = '';
@@ -32,6 +33,16 @@ client.on('message', async message => {
             msg = msg.replace('tn[' + team_name + ']', '');
         }
 
+        
+        if (msg.indexOf('ct[') >= 0){
+            var start = msg.indexOf('ct[');
+            var end = msg.indexOf(']');
+            counter_team = msg.substring(start + 3, end);
+
+            msg = msg.replace('ct[' + counter_team + ']', '');
+        }
+
+        
         // ********************************
         // Parse Description
         // ********************************

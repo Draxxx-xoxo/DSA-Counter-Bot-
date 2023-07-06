@@ -1,6 +1,6 @@
 {
-    "token":"Nzg1MTE4MDcxMDE4NDg3ODA5.X8zMLg.nAols4jmxzxAMZPyAr62qHJm_Ls",
+    "token":"",
     "mainprefix":"c!",
     "counterprefix":"c!counter",
-    "pgKey": "postgres://tunxmoxheraorf:a4377d3388e7f42278639d7ec102facebe275b4c3526479b7a5070def395c35f@ec2-35-171-31-33.compute-1.amazonaws.com:5432/d903gfrtjavpje"
+    "pgKey": ""
 }
